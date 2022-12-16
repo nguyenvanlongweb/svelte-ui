@@ -3,6 +3,7 @@
     BiArrowLeftSquareFill,
     BiApple,
     HiSolidMenuAlt3,
+    RiSearchLine,
   } from "oh-vue-icons/icons";
   import IconOh from "~/components/IconOh.svelte";
 </script>
@@ -11,15 +12,26 @@
   <title>About page</title>
 </svelte:head>
 
-<div>
-  <h1 class="apple-icon">this is page</h1>
-  <IconOh icon={BiApple} class="apple-icon" />
-  <IconOh icon={BiArrowLeftSquareFill} />
-  <IconOh icon={HiSolidMenuAlt3} />
+<div class="about-page">
+  <h1>this is page</h1>
+  <!-- <IconOh icon={BiApple} class="apple-icon" />
+  <IconOh icon={BiArrowLeftSquareFill} /> -->
+  <IconOh icon={HiSolidMenuAlt3} class="apple-icon" />
+  <IconOh icon={RiSearchLine} class="icon" />
 </div>
 
 <style lang="scss">
-  .apple-icon {
-    color: tomato;
+  .about-page {
+    :global(.apple-icon) {
+      color: tomato;
+      width: 20px;
+      height: 20px;
+    }
+
+    :global(.icon) {
+      color: peru;
+      width: 20px;
+      height: 20px;
+    }
   }
 </style>

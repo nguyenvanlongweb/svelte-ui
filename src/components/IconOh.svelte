@@ -7,6 +7,22 @@
   export { icon };
 </script>
 
-<svg height="24" width="24" {viewBox} fill="currentColor" class={$$props.class}>
+<svg
+  on:click
+  height={icon.width}
+  width={icon.width}
+  fill="currentColor"
+  {viewBox}
+  {...icon.attr}
+  class={`icon  ${$$props.class ? $$props.class : ""}`}
+>
   {@html icon.raw}
 </svg>
+
+<style>
+  .icon {
+    color: var(--color-icon);
+    height: 20px;
+    width: 20px;
+  }
+</style>

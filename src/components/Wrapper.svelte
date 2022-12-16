@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class={`wrapper ${$$props.class ? $$props.class : ""}`}>
   <slot />
 </div>
 
