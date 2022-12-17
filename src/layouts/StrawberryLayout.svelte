@@ -34,9 +34,9 @@
 <!-- <div>{ 'move-left': navMobile 'close-animation': closeAnimation } -->
 
 <div
-  class={`strawberry-layout ${navClass ? "move-left" : ""} ${
-    closeAnimation ? "close-animation" : ""
-  }`}
+  class="strawberry-layout"
+  class:move-left={navClass}
+  class:close-animation={closeAnimation}
 >
   <Nav callback={handleToggleMenu} />
   <Container>
